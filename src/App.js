@@ -1,10 +1,14 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Header from "./components/Layout/Header";
+import Meals from "./components/Meals/Meals";
 const App = function () {
   return (
-    <div>
+    <Fragment>
       <Header />
-    </div>
+      <main>
+        <Meals />
+      </main>
+    </Fragment>
   );
 };
 export default App;
