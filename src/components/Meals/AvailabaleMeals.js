@@ -1,5 +1,6 @@
 import React from "react";
 import { Fragment } from "react";
+import Card from "../UI/Card";
 import classes from "./AvailableMeals.module.css";
 import MealsItem from "./MealsItem/MealsItem";
 const DUMMY_MEALS = [
@@ -39,9 +40,11 @@ function AvailabaleMeals() {
   ));
   return (
     <Fragment>
-      <section className={classes.meals}>
-        <ul>{mealsItem}</ul>
-      </section>
+      <Card>
+        <section className={classes.meals}>
+          <ul>{mealsItem}</ul>
+        </section>
+      </Card>
     </Fragment>
   );
 }
