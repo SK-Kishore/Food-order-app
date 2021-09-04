@@ -3,8 +3,8 @@ import { Fragment } from "react";
 import ReactDom from "react-dom";
 import classes from "./Modal.module.css";
 
-const BackDrop = function () {
-  return <div className={classes.backdrop} />;
+const BackDrop = function (props) {
+  return <div onClick={props.onClick} className={classes.backdrop} />;
 };
 const ModalOverlay = function (props) {
   return (
@@ -18,7 +18,10 @@ function Modal(props) {
   const portalElement = document.getElementById("modal-overlay");
   return (
     <Fragment>
-      {ReactDom.createPortal(<BackDrop />, portalElement)}
+      {ReactDom.createPortal(
+        <BackDrop onClick={props.onClick} />,
+        portalElement
+      )}
       {ReactDom.createPortal(
         <ModalOverlay>{props.children}</ModalOverlay>,
         portalElement
