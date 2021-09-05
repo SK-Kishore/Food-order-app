@@ -9,6 +9,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  border: 5px solid rgba(238, 162, 39, 0.76);
+  border-radius: 15px;
 }
 
 @keyframes meals-appear {

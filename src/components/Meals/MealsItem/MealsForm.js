@@ -3,7 +3,6 @@ import classes from "./MealsForm.module.css";
 import Input from "../../UI/Input";
 function MealsForm(props) {
   const userEnterAmount = useRef();
-
   const onSubmissionHandler = function (e) {
     e.preventDefault();
     const userEnteredAmount = userEnterAmount.current.value;
