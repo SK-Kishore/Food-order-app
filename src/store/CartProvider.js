@@ -9,7 +9,8 @@ const initialValue = {
 const reducer = function (preState, action) {
   const updatedItems = preState.items.concat(action.items);
   const updatedAmount =
-    preState.totalAmount + action.items.totalAmount * action.items.price;
+    preState.totalAmount + action.items.amount * action.items.price;
+  console.log(updatedAmount);
   return {
     items: updatedItems,
     totalAmount: updatedAmount,

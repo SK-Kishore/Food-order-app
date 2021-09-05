@@ -6,7 +6,7 @@ function MealsItem(props) {
   const ctx = useContext(CartContext);
 
   const price = `$${props.price.toFixed(2)}`;
-
+  //passing the data via contex;
   const addToCart = function (userEnterAmount) {
     ctx.addItem({
       id: props.id,
@@ -15,7 +15,7 @@ function MealsItem(props) {
       name: props.name,
     });
   };
-
+  console.log("MealsItem");
   return (
     <li className={classes.meal}>
       <div>
