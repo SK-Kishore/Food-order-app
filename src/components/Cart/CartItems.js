@@ -11,7 +11,7 @@ function CartItems(props) {
     </ul>
   );
   return (
-    <Modal onClick={props.close} >
+    <Modal onClick={props.close}>
       {cartItems}
       <div className={classes.total}>
         <span>Total Amount</span>
